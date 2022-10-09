@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es-CL">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mis Perris - Adopciones</title>
+    <style>
+      body{
+        margin:0;
+        padding:0;
+      }
+      .box{
+        display: flex;
+        justify-content: center;
+        position:relative;
+        float:left;
+      }
+      .boxTitulo{
+        width:90%;
+        background-color: #85d4b7;
+        height: 75px;
+      }
+      .boxMenu{
+        width: 100%;
+        background-color: #6dccaa;
+        height: 55px;
+        border: 2px solid #85d4b7;
+        animation: menu 500ms;
+      }
+      .textoTitulo{
+        padding-top: 20px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #FFFFFF;
+        font-family: 'Open Sans';
+        letter-spacing: 2px;
+      }
+      .textoMenu{
+        padding-top: 15px;
+        font-size: 15px;
+        font-weight: bold;
+        color: #FFFFFF;
+        font-family: 'Open Sans';
+        letter-spacing: 2px;
+      }
+      .logo{
+        font-size:60px;
+        margin-right: 10px;
+        color: #FFFFFF;
+        position: relative;
+        bottom:5px;
+      }
+      .iconMenu1{
+        width:10%;
+        background-color: #85d4b7;
+        height: 75px;
+      }
+      .menuHide{
+        display:none;
+      }
+      .menuShow{
+        display:block;
+      }
+      @keyframes menu {
+        from {height: 0px;}
+        to {height: 55px;}
+      }
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+    <script src="https://kit.fontawesome.com/0170f37939.js" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="crossorigin="anonymous"></script>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+    <script>
+      function activaMenu(){
+        var element = document.getElementById("menuContainer");
+        element.classList.remove("menuHide");
+        element.classList.add("menuShow");
+        document.getElementById("menuon").style.display = "none";
+        document.getElementById("menuoff").style.display = "block";
+      }
+    </script>
+    
+    <script>
+      function escondeMenu(){
+        var element = document.getElementById("menuContainer");
+        element.classList.remove("menuShow");
+        element.classList.add("menuHide");
+        document.getElementById("menuon").style.display = "block";
+        document.getElementById("menuoff").style.display = "none";
+      }
+    </script>
+    
+    
+    
+  </head>
+  <body>
+    <div>
+      <div class="box textoTitulo iconMenu1">
+        <i class="fa-solid fa-bars" id="menuon" onclick="activaMenu();"></i>
+        <i class="fa-solid fa-xmark" id="menuoff" style="display:none;" onclick="escondeMenu();"></i>
+      </div>
+      <div class="box boxTitulo">
+        <span class="logo" ><i class="fa-solid fa-paw"></i></span>
+        <span class="textoTitulo" style="margin-right: 11%;">MIS PERRIS</span>
+      </div>
+    </div>
+    <div class="menuHide" id="menuContainer">
+      <div class="box boxMenu">
+        <span class="textoMenu">INICIO</span>
+      </div>
+      <div class="box boxMenu">
+        <span class="textoMenu">QUIENES SOMOS</span>
+      </div>
+      <div class="box boxMenu">
+        <span class="textoMenu">SERVICIOS</span>
+      </div>
+      <div class="box boxMenu">
+        <span class="textoMenu">CONTACTENOS</span>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://i1.wp.com/puppytoob.com/wp-content/uploads/2019/10/Dog-and-Man.jpg" alt="Primera Slide">
+          </div>
+        </div>
+        
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://cdn0.wideopenpets.com/wp-content/uploads/2018/01/AdobeStock_107590486.jpg" alt="Segunda Slide">
+          </div>
+        </div>
+        
+        <div class="carousel-inner">
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://mixkit.imgix.net/videos/preview/mixkit-man-with-his-dog-watching-the-sunset-on-the-horizon-4839-0.jpg" alt="Tercera Slide">
+          </div>
+        </div>
+        
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Anterior</span>
+        </a>
+        
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Siguiente</span>
+        </a>
+        
+      </div>
+    </div>
+    
+  </body>
+</html>
